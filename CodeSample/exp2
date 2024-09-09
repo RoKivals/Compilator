@@ -2,7 +2,7 @@ rec fun isPrimeHelper(n i) {
     if i = 1 then {
         true
     } else {
-        var left = n % i
+        let left = n % i
         if left = 0 then {
             false
         } else {
