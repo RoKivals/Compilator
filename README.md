@@ -104,8 +104,8 @@ if a - b > 0 then
 
 ### Списки
 ```f#
-var numbers = [1 2 3 4 5]
-var len = 5
+let numbers = [1 2 3 4 5]
+let len = 5
 
 fun f(lst n)
 {
@@ -163,7 +163,7 @@ fun f(lst n)
 Аналогично функции `Func`, но используется для парсинга рекурсивных функций, которые объявляются с ключевым словом `rec fun`. 
 Возвращает узел AST типа `LetRec`.
 7. **Variable**
-Парсит объявление переменной, начиная с ключевого слова `var`, затем идет имя переменной и выражение, которому переменная присваивается.
+Парсит объявление переменной, начиная с ключевого слова `let`, затем идет имя переменной и выражение, которому переменная присваивается.
 8. **ParseList** – парсер для списков.
 9. **ApplicationFunc** – парсер для вызова функций.
 10. **Operation**
@@ -351,8 +351,8 @@ print(fact(10))
 Этот файл демонстрирует условные операторы. Он создает две переменные `x` и `y`, а затем сравнивает их. В зависимости от результата сравнения программа выводит либо `1`, либо `0`:
 
 ```fsharp
-var x = 11
-var y = 10
+let x = 11
+let y = 10
 
 if x < y then {
     print(1)
@@ -370,7 +370,7 @@ rec fun isPrimeHelper(n i) {
     if i = 1 then {
         true
     } else {
-        var left = n % i
+        let left = n % i
         if left = 0 then {
             false
         } else {
@@ -387,7 +387,7 @@ fun isPrime(n) {
     }
 }
 
-var number = 4
+let number = 4
 
 print(isPrime(number))
 ```
@@ -401,11 +401,11 @@ print(1 <> 2)
 print(1 = 2)
 print(1 > 2)
 print(1 < 1)
-var a = 1
-var b = 2
+let a = 1
+let b = 2
 print(a + b)
 print(1 + 1)
-var lst = [1 2 3 true]
+let lst = [1 2 3 true]
 print(lst)
 ```
 
